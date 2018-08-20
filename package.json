@@ -29,8 +29,6 @@
     "lint": "npm-run-all -p lint:global lint:from-bin",
     "lint:global": "tslint --project test/tsconfig.json --format stylish",
     "lint:from-bin": "node bin/tslint --project test/tsconfig.json --format stylish",
-    "precommit": "npm-run-all precommit:prettier",
-    "precommit:prettier": "pretty-quick --staged",
     "prettier": "prettier --write ./**/*.{js,ts,css,scss,json,md,yml} --ignore-path ./.prettierignore",
     "publish:local": "./scripts/npmPublish.sh",
     "test": "npm-run-all test:pre -p test:mocha test:rules",

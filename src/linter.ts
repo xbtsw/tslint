@@ -95,7 +95,7 @@ export class Linter {
         return mapDefined(
             program.getSourceFiles(),
             (file) =>
-                file.fileName.endsWith(".d.ts") || program.isSourceFileFromExternalLibrary(file)
+                file.fileName.endsWith(".d.ts") || file.fileName.endsWith(".json") || program.isSourceFileFromExternalLibrary(file)
                     ? undefined
                     : file.fileName,
         );
